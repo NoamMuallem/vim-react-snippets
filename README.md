@@ -12,7 +12,7 @@ packages.
 ```vim
 call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
+Plug 'NoamMuallem/vim-react-snippets'
 call plug#end()
 ```
 
@@ -1501,6 +1501,6 @@ expect($TABSTOP_container).toMatchSnapshot()
 [react]: https://reactjs.org/
 [ultisnips]: https://github.com/SirVer/ultisnips
 [ultisnips folder]:
-  https://github.com/mlaursen/vim-react-snippets/tree/master/UltiSnips
+  https://github.com/NoamMuallem/vim-react-snippets/tree/master/UltiSnips
 [vim-plug]: https://github.com/junegunn/vim-plug
 [full .vimrc]: https://github.com/mlaursen/dotfiles/tree/master/.vimrc
