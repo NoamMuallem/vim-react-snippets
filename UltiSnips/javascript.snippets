@@ -340,18 +340,18 @@ endsnippet
 # Hooks and effects
 #
 
-snippet useS "useState()" b
-const [$1, set$3`!p snip.rv=upperfirst(t[1])`] = useState($2)
+snippet useS "React.useState()" b
+const [$1, set$3`!p snip.rv=upperfirst(t[1])`] = React.useState($2)
 endsnippet
 
-snippet useE "useEffect()" b
-useEffect(() => {
+snippet useE "React.useEffect()" b
+ React.useEffect(() => {
 	$0
 }, [$1])
 endsnippet
 
-snippet useEA "useEffect() async" b
-useEffect(() => {
+snippet useEA "React.useEffect() async" b
+ React.useEffect(() => {
 	let cancelled = false
 
 	;(async function ${4:doWork}() {
@@ -369,43 +369,43 @@ useEffect(() => {
 }, [$3])
 endsnippet
 
-snippet useC "useContext()" b
-const ${1:context} = useContext($2)
+snippet useC "React.useContext()" b
+const ${1:context} = React.useContext($2)
 endsnippet
 
-snippet useRed "useReducer(reducer, initialValue)" b
-const [${3:state}, ${4:dispatch}] = useReducer(${1:reducer}, ${2:null})
+snippet useRed "React.useReducer(reducer, initialValue)" b
+const [${3:state}, ${4:dispatch}] = React.useReducer(${1:reducer}, ${2:null})
 endsnippet
 
-snippet useCB "useCallback(fn, inputs)" b
-const ${1:callback} = useCallback(($2) => ${3:{
+snippet useCB "React.useCallback(fn, inputs)" b
+const ${1:callback} = React.useCallback(($2) => ${3:{
 	$4
 }}, [$5])
 endsnippet
 
-snippet useM "useMemo(fn, inputs)" b
-const ${1:memoized} = useMemo(() => ${2:{
+snippet useM "React.useMemo(fn, inputs)" b
+const ${1:memoized} = React.useMemo(() => ${2:{
 	$3
 }}, [$4])
 endsnippet
 
-snippet useR "useRef(defaultValue)" b
-const ${1:ref} = useRef(${2:null})
+snippet useR "React.useRef(defaultValue)" b
+const ${1:ref} = React.useRef(${2:null})
 endsnippet
 
-snippet useI "useImperitiveHandle(ref, createHandle, [inputs])" b
-useImperitiveHandle(${1:ref}, ${4:() => ({
+snippet useI "React.useImperitiveHandle(ref, createHandle, [inputs])" b
+ React.useImperitiveHandle(${1:ref}, ${4:() => ({
 	$2
 })}, ${5:[$3]})
 endsnippet
 
-snippet useL "useLayoutEffect()" b
-useLayoutEffect(() => {
+snippet useL "React.useLayoutEffect()" b
+ React.useLayoutEffect(() => {
 	$0
 }, [$1])
 endsnippet
 
-snippet useDV "useDebugValue(value)" b
+snippet useDV "React.useDebugValue(value)" b
 useDebugValue(${1:null})
 endsnippet
 
@@ -414,24 +414,24 @@ endsnippet
 #
 
 priority -1
-snippet useC "useContext()" w
+snippet useC "React.useContext()" w
 useContext$2($1)
 endsnippet
 
-snippet useCB "useCallback(fn, inputs)" w
-useCallback(($1) => ${2:{
+snippet useCB "React.useCallback(fn, inputs)" w
+ React.useCallback(($1) => ${2:{
 	$3
 }}, [$4])
 endsnippet
 
-snippet useM "useMemo(fn, inputs)" w
-useMemo(() => ${1:{
+snippet useM "React.useMemo(fn, inputs)" w
+ React.useMemo(() => ${1:{
 	$2
 }}, [$3])
 endsnippet
 
-snippet useR "useRef(defaultValue)" w
-useRef$2(${1:null})$0
+snippet useR "React.useRef(defaultValue)" w
+ React.useRef$2(${1:null})$0
 endsnippet
 
 priority 0
@@ -444,12 +444,12 @@ snippet mc "mirrored const"
 const $1 = '$1'
 endsnippet
 
-snippet useD "useDispatch" b
-const dispatch = useDispatch()
+snippet useD "React.useDispatch" b
+const dispatch = React.useDispatch()
 endsnippet
 
-snippet useSL "useSelector(selector)" b
-const ${1:value} = useSelector(${2:state => $3})
+snippet useSL "React.useSelector(selector)" b
+const ${1:value} = React.useSelector(${2:state => $3})
 endsnippet
 
 snippet reft "export type Name = Ref<E | null>" b
@@ -465,16 +465,16 @@ export type $1 = RefCallback<${3:HTML{$2}Element} | null>$0
 endsnippet
 
 priority -1
-snippet useD "useDispatch" b
-useDispatch()
+snippet useD "React.useDispatch" b
+ React.useDispatch()
 endsnippet
 
-snippet useSL "useSelector(state)" w
-useSelector((${1:state => $2}))
+snippet useSL "React.useSelector(state)" w
+ React.useSelector((${1:state => $2}))
 endsnippet
 
-snippet useAS "useSelector(state)" w
-useAppSelector(${1:state => $2})
+snippet useAS "React.useSelector(state)" w
+ React.useAppSelector(${1:state => $2})
 endsnippet
 
 snippet reft "Ref<E | null>" w
